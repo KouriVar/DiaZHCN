@@ -243,4 +243,102 @@ for (const [find, replacement] of variants(fixtureRule)) {
 }
 assert.equal(fixture, once, "WebUI replacements must be idempotent");
 
-console.log(`Validated ${stringEntries.length} translations and ${manifest.webRules.length} WebUI rules.`);
+
+// --- Dia 1.49.1 草稿清单 -----------------------------------------------------
+// 草稿清单不得注册进 index.json；它是规则转写的载体，不是可安装清单。
+const draftPath = path.join(root, "manifests", "1.49.1-87398.rules.json");
+const draftUnconvertedPath = path.join(
+  root,
+  "manifests",
+  "1.49.1-87398.unconverted.json"
+);
+assert.ok(fs.existsSync(draftPath), "1.49.1 draft manifest must exist");
+const draft = JSON.parse(fs.readFileSync(draftPath, "utf8"));
+const draftUnconverted = JSON.parse(fs.readFileSync(draftUnconvertedPath, "utf8"));
+assert.equal(draft.schemaVersion, 1);
+assert.equal(draft.status, "draft-unverified");
+assert.equal(draft.shortVersion, "1.49.1");
+assert.equal(draft.buildVersion, "87398");
+assert.equal(draft.architecture, "arm64");
+assert.equal(draft.bundleIdentifier, "company.thebrowser.dia");
+assert.ok(draft.promotionRequirements.length > 0, "draft must list promotion requirements");
+assert.ok(
+  Array.isArray(draft.webRules) && draft.webRules.length > 0,
+  "draft must carry converted rules"
+);
+for (const build of index.knownBuilds) {
+  assert.notEqual(build.buildVersion, draft.buildVersion, "draft must not be registered");
+  assert.ok(
+    !build.manifest.includes("1.49.1"),
+    "draft must stay out of the manifest index"
+  );
+  assert.ok(
+    !build.originalWebHashes.includes("1.49.1"),
+    "draft must not claim unverified hashes"
+  );
+}
+assert.ok(
+  !index.knownBuilds.some((build) => build.shortVersion === draft.shortVersion),
+  "draft build version must remain unregistered"
+);
+const draftIds = draft.webRules.map((rule) => rule.id);
+assert.equal(new Set(draftIds).size, draftIds.length, "draft rule ids must be unique");
+const draftSources = new Set();
+for (const rule of draft.webRules) {
+  assert.ok(rule.id.startsWith("web.1491."), `${rule.id}: draft ids must be namespaced`);
+  assert.ok(rule.source.length > 2, `${rule.id}: source is too broad`);
+  assert.ok(rule.source === rule.source.trim(), `${rule.id}: source has edge whitespace`);
+  assert.ok(rule.target.length > 0, `${rule.id}: missing target`);
+  assert.ok(Number.isInteger(rule.expectedMatches) && rule.expectedMatches > 0);
+  assert.equal(
+    rule.expectedPatchedMatches,
+    rule.expectedMatches,
+    `${rule.id}: draft rules must not cascade`
+  );
+  assert.ok(Array.isArray(rule.files) && rule.files.length > 0, `${rule.id}: missing file scope`);
+  assert.equal(
+    rule.files.reduce((sum, file) => sum + file.matches, 0),
+    rule.expectedMatches,
+    `${rule.id}: per-file counts do not add up`
+  );
+  assert.equal(
+    rule.files.reduce((sum, file) => sum + file.patchedMatches, 0),
+    rule.expectedPatchedMatches,
+    `${rule.id}: patched per-file counts do not add up`
+  );
+  for (const file of rule.files) {
+    assert.ok(
+      file.path.startsWith(`${draft.resourceRoot}/`),
+      `${rule.id}: rule file outside 1.49.1 resource root`
+    );
+    assert.ok(file.path.endsWith(".js") || file.path.endsWith(".html"));
+  }
+  assert.equal(
+    catalog.get(rule.source),
+    rule.target,
+    `${rule.id}: rule must reuse the unified catalog translation`
+  );
+  assert.ok(!draftSources.has(rule.source), `${rule.id}: duplicate draft source`);
+  draftSources.add(rule.source);
+}
+assert.equal(
+  draftUnconverted.uniqueSources,
+  draftUnconverted.rules.length,
+  "unconverted rule count must match its inventory"
+);
+assert.equal(
+  draftUnconverted.rules.reduce((sum, item) => sum + item.occurrences, 0),
+  draftUnconverted.totalOccurrences,
+  "unconverted occurrence total must add up"
+);
+for (const item of draftUnconverted.rules) {
+  assert.ok(item.source.length > 0);
+  assert.ok(item.files.length > 0);
+  // 同一英文可以同时以 >文本< 与 `文本` 两种锚点出现，故此处不禁止与已转换集重叠。
+}
+assert.equal(draftUnconverted.htmlAttributes.length, 1);
+
+console.log(
+  `Validated ${stringEntries.length} translations, ${manifest.webRules.length} WebUI rules, ` +
+  `${draft.webRules.length} Dia 1.49.1 draft rules.`
+);
