@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "unconverted",
+  "status": "converted",
   "shortVersion": "1.49.1",
   "buildVersion": "87398",
   "reason": "fork 第四层 variants() 只生成 \"…\"、'…'、>…<、&quot;…&quot; 四种锚点；反引号是 JS 模板字面量边界，不在白名单内。为避免改动第四层机制并波及 1.41.1 既有清单，这些规则不转写。",
@@ -1303,6 +1303,28 @@
       "source": "<html lang=\"en\">",
       "target": "<html lang=\"zh-CN\">",
       "note": "非文案（页面语言标记），fork 规则模型不适用"
+    }
+  ],
+  "convertedInto": "manifests/1.49.1-87398.rules.json",
+  "convertedNote": "本清单保留为来源锚点的原始记账：182 个反引号 source / 225 次命中已于本次全部转入规则草稿，通过 webAnchorVariants 的 template 锚点启用。excluded 列出仍未转写的 3 项及其原因。",
+  "excluded": [
+    {
+      "source": "Outputs ",
+      "target": "输出 ",
+      "occurrences": 1,
+      "reason": "锚点内含尾随空格，属来源侧切片残留，易失配"
+    },
+    {
+      "source": "Work on this ",
+      "target": "处理此项",
+      "occurrences": 1,
+      "reason": "同上"
+    },
+    {
+      "source": "<html lang=\"en\">",
+      "target": "<html lang=\"zh-CN\">",
+      "occurrences": 1,
+      "reason": "HTML 语言属性，非文案；fork 规则模型不适用"
     }
   ]
 }

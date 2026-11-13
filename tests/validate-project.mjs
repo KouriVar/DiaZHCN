@@ -268,6 +268,12 @@ assert.equal(draft.shortVersion, "1.49.1");
 assert.equal(draft.buildVersion, "87398");
 assert.equal(draft.architecture, "arm64");
 assert.equal(draft.bundleIdentifier, "company.thebrowser.dia");
+// 反引号锚点必须显式 opt-in，且只能出现一次声明。
+assert.deepEqual(
+  draft.webAnchorVariants,
+  ["double", "single", "angle", "entity", "template"],
+  "1.49.1 draft must opt in the template anchor explicitly"
+);
 assert.ok(draft.promotionRequirements.length > 0, "draft must list promotion requirements");
 assert.ok(
   Array.isArray(draft.webRules) && draft.webRules.length > 0,
@@ -344,6 +350,44 @@ for (const item of draftUnconverted.rules) {
   // 同一英文可以同时以 >文本< 与 `文本` 两种锚点出现，故此处不禁止与已转换集重叠。
 }
 assert.equal(draftUnconverted.htmlAttributes.length, 1);
+// 反引号锚点已全部转入草稿：原清单保留为记账，但每条 source 必须能在草稿中找到。
+assert.equal(draftUnconverted.status, "converted");
+assert.equal(
+  draftUnconverted.convertedInto,
+  "manifests/1.49.1-87398.rules.json"
+);
+const draftSourceSet = new Set(draft.webRules.map((rule) => rule.source));
+for (const item of draftUnconverted.rules) {
+  assert.ok(
+    draftSourceSet.has(item.source),
+    `converted source missing from draft: ${item.source}`
+  );
+}
+// 共用同一中文目标的来源必须显式记账：verify 模式的逐规则目标计数无法区分它们。
+for (const group of draft.targetCollisions || []) {
+  assert.ok(group.sources.length >= 2, "collision group must have at least two sources");
+  for (const source of group.sources) {
+    assert.ok(
+      draft.webRules.some((rule) => rule.source === source && rule.target === group.target),
+      `collision source missing from draft: ${source}`
+    );
+  }
+}
+const collideTargets = new Set(
+  draft.webRules.map((rule) => rule.target).filter(
+    (target, index, all) => all.indexOf(target) !== index
+  )
+);
+assert.equal(
+  collideTargets.size,
+  (draft.targetCollisions || []).length,
+  "every duplicated target must be recorded in targetCollisions"
+);
+assert.equal(draftUnconverted.excluded.length, 3);
+assert.deepEqual(
+  draftUnconverted.excluded.map((item) => item.source),
+  ["Outputs ", "Work on this ", "<html lang=\"en\">"]
+);
 
 console.log(
   `Validated ${stringEntries.length} translations, ${manifest.webRules.length} WebUI rules, ` +
