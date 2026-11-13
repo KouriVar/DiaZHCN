@@ -148,7 +148,10 @@ assert.ok(
 );
 
 const stringEntries = [...strings.matchAll(/^"((?:\\.|[^"])*)"\s*=\s*"((?:\\.|[^"])*)";$/gm)];
-assert.equal(stringEntries.length, 408, "translation catalog count changed unexpectedly");
+// 408 条既有词条 + 710 条 Dia 1.49.1 新增词条 + 40 条 WebUI 规则锚点词条（均为独立重译，
+// 来源范围见 zh-Hans.strings 的分节注释）。
+// 仍为精确断言，不放宽为区间，避免词表被静默增删。
+assert.equal(stringEntries.length, 1158, "translation catalog count changed unexpectedly");
 const stringKeys = stringEntries.map((entry) => entry[1]);
 const duplicateKeys = stringKeys.filter((key, index) => stringKeys.indexOf(key) !== index);
 assert.deepEqual([...new Set(duplicateKeys)], [], "Localizable.strings contains duplicate keys");
