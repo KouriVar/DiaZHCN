@@ -1,0 +1,1308 @@
+{
+  "schemaVersion": 1,
+  "status": "unconverted",
+  "shortVersion": "1.49.1",
+  "buildVersion": "87398",
+  "reason": "fork 第四层 variants() 只生成 \"…\"、'…'、>…<、&quot;…&quot; 四种锚点；反引号是 JS 模板字面量边界，不在白名单内。为避免改动第四层机制并波及 1.41.1 既有清单，这些规则不转写。",
+  "totalOccurrences": 225,
+  "uniqueSources": 182,
+  "rules": [
+    {
+      "source": "Stop",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Send",
+      "occurrences": 3,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Stop response",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Couldn’t send message",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Saving…",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Save",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Copy",
+      "occurrences": 6,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js",
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Copied",
+      "occurrences": 6,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js",
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Copy message",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Searched tabs",
+      "occurrences": 4,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js",
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Searching tabs",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Searched calendar",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Searching calendar",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Checked availability",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js",
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Checking availability",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js",
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Analyzed content",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Analyzing content",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Calculated",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Calculating",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js",
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Looked up person",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Looking up person",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js",
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Found recent people",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Finding recent people",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js",
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Read web results",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Reading web results",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Filled in form",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Filling in form",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Created artifact",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Creating artifact",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js",
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Read Notion page",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Reading Notion page",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Searched the web",
+      "occurrences": 3,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js",
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Searching the web",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js",
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Gathered context from the web",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Gathering context from the web",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Searched memory",
+      "occurrences": 3,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js",
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Searching memory",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js",
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Read attachments",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Reading attachments",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Searched multiple apps",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Searching multiple apps",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Searched multiple sources",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Searching multiple sources",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Gathered context from multiple apps",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Gathering context from multiple apps",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Gathered context from multiple sources",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Gathering context from multiple sources",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Worked with files",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Working with files",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Used multiple apps",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Using multiple apps",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Used multiple tools",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Using multiple tools",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Waiting…",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Thinking",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js",
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Wait for the current response to finish.",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Wait for the current revision to finish.",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Dia couldn’t meaningfully match your voice. Try another revision.",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Dia didn’t return a revised draft. Try again.",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "What would have made this suggestion better?",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Missing detail, wrong framing, or bad timing",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "What was off about this suggestion?",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Wrong facts, not mine, already done, or bad timing",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Sending…",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Adding…",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Add task",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Show less",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "No meeting cards right now.",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Could not refresh suggestions. Try again.",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Suggested by Dia",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Message Dia…",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Could not send message",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Couldn’t restore chat",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Meeting recap",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Meeting prep",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Preparing your meeting recap…",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Preparing your meeting prep…",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Compare selected",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Explore this option",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Selected view",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Selected quadrant",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Go deeper",
+      "occurrences": 3,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Direction to test",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Stress-test this direction",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "What to notice",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Couldn’t save your changes. Try again.",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Couldn’t revise this draft. Try again.",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Task is no longer available.",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Error starting chat.",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Web page",
+      "occurrences": 3,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js",
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Suggested recently",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/BSo92HxR.js"
+      ]
+    },
+    {
+      "source": "Report Error",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Try Again",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Send Message Again",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Retry Without Attachment",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "New Chat",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Edit Message",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Contact Support",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Something went wrong.",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Show details",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Hide details",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Slack member",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Search Google",
+      "occurrences": 3,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js",
+        "app/immutable/nodes/13.6KY2z1vA.js"
+      ]
+    },
+    {
+      "source": "Searching Notion",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Searched Notion",
+      "occurrences": 2,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Fetching Notion page",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Fetched Notion page",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Fetch Page",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Creating Notion pages",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Created Notion pages",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Create Pages",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Updating Notion page",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Updated Notion page",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Update Page",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Duplicating Notion page",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Duplicated Notion page",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Duplicate Page",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Creating Notion database",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Created Notion database",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Create Database",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Updating Notion data source",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Updated Notion data source",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Update Data Source",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Adding Notion comment",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Added Notion comment",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Add Comment",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Getting Notion comments",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Got Notion comments",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Get Comments",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Getting Notion teams",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Got Notion teams",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Get Teams",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Getting Notion users",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Got Notion users",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Get Users",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Moving Notion pages",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Moved Notion pages",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Move Pages",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Allowed action",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Always-allowed action",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Denied action",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Reading tabs",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Read tabs",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Opening tabs",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Opened tabs",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Closing tabs",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Closed tabs",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Working with tabs",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Using language model",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Checking calendar",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Checked calendar",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Reading calendar",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Read calendar",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Searching email",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Searched email",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Searching Slack",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Searched Slack",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Searching Google Drive",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Searched Google Drive",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Searching SharePoint",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Searched SharePoint",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Searching Figma",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Searched Figma",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Searching Canva",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Searched Canva",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Using Salesforce",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Used Salesforce",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Reading web pages",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Read web pages",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Filling in",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Reading saved results",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Read saved results",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Asking a question",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Asked a question",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Gathered context",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Copy was not confirmed",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Collapse message",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Expand message",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/chunks/CF6bMsxk.js"
+      ]
+    },
+    {
+      "source": "Your meeting prep is ready",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/nodes/4.D6YQYJvu.js"
+      ]
+    },
+    {
+      "source": "Your meeting recap is ready",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/nodes/4.D6YQYJvu.js"
+      ]
+    },
+    {
+      "source": "Task Dashboard",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/nodes/6.CoDzUqxs.js"
+      ]
+    },
+    {
+      "source": "New Task",
+      "occurrences": 1,
+      "files": [
+        "app/immutable/nodes/7.DhrAczbp.js"
+      ]
+    }
+  ],
+  "htmlAttributes": [
+    {
+      "source": "<html lang=\"en\">",
+      "target": "<html lang=\"zh-CN\">",
+      "note": "非文案（页面语言标记），fork 规则模型不适用"
+    }
+  ]
+}

@@ -1,0 +1,665 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-unverified",
+  "product": "Dia",
+  "bundleIdentifier": "company.thebrowser.dia",
+  "officialTeamIdentifier": "S6N382Y83G",
+  "shortVersion": "1.49.1",
+  "buildVersion": "87398",
+  "architecture": "arm64",
+  "minimumMacOS": 14.0,
+  "note": "草稿清单：仅包含可从公开锚点清单直接转写的 >文本< 类规则。未注册进 manifests/index.json，安装器不会加载。缺少 180 文件哈希与 4 个 webRoot 精确文件数，因此在补齐前不能作为 full 模式清单使用。",
+  "resourceRoot": "Contents/Resources/web-chat-resources/dist",
+  "promotionRequirements": [
+    "在真实 Dia 1.49.1（87398）上生成 180 个 .js/.html 文件的 original 与 patched SHA-256 清单",
+    "实测 4 个 webRoot 的文本文件数（1.41.1 为 98/79/1/2），并写入 webRootExpectations",
+    "把 webExt 白名单、excludedPathFragments、minimumTotalWebMatches/maximumTotalWebMatches 固定为实测值",
+    "在 tests/validate-project.mjs 增加对 1.49.1 清单的完整断言后，才可写入 manifests/index.json"
+  ],
+  "webRules": [
+    {
+      "id": "web.1491.recommended",
+      "source": "Recommended",
+      "target": "推荐",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.couldn-t-submit-try-again",
+      "source": "Couldn’t submit. Try again.",
+      "target": "无法提交，请重试。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.back",
+      "source": "Back",
+      "target": "后退",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.skip-question",
+      "source": "Skip question",
+      "target": "跳过问题",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.skip-all",
+      "source": "Skip all",
+      "target": "全部跳过",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.next-steps",
+      "source": "Next steps",
+      "target": "后续步骤",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.key-points",
+      "source": "Key points",
+      "target": "要点",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.be-more-concise",
+      "source": "Be more concise",
+      "target": "更简洁",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.use-my-voice",
+      "source": "Use my voice",
+      "target": "使用我的语气",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.cancel",
+      "source": "Cancel",
+      "target": "取消",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.revise",
+      "source": "Revise",
+      "target": "修改",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.view-all",
+      "source": "View all",
+      "target": "查看全部",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.creating",
+      "source": "Creating…",
+      "target": "正在创建…",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.created",
+      "source": "Created",
+      "target": "已创建",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.if-you-want-i-can-turn-this-into",
+      "source": "If you want, I can turn this into:",
+      "target": "如果你愿意，我可以把它变成：",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.view-more",
+      "source": "View more",
+      "target": "查看更多",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.sources-will-appear-here-as-dia-finds-th",
+      "source": "Sources will appear here as Dia finds them.",
+      "target": "Dia 找到的来源会显示在这里。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.sources",
+      "source": "Sources",
+      "target": "来源",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.outputs-you-create-will-appear-here",
+      "source": "Outputs you create will appear here.",
+      "target": "你创建的内容会显示在这里。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.a-status-will-appear-as-the-task-takes-s",
+      "source": "A status will appear as the task takes shape.",
+      "target": "任务逐渐成形时会显示状态。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.status",
+      "source": "Status",
+      "target": "服务状态",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.next-action",
+      "source": "Next action",
+      "target": "下一步行动",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.activity",
+      "source": "Activity",
+      "target": "活动",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.press-to-add-a-task",
+      "source": "Press ↵ to add a task",
+      "target": "按 ↵ 添加任务",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.no-tasks-yet-add-one-above",
+      "source": "No tasks yet. Add one above.",
+      "target": "还没有任务。请在上方添加。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.tasks",
+      "source": "Tasks",
+      "target": "任务",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.add-task",
+      "source": "Add task",
+      "target": "添加任务",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.dismiss",
+      "source": "Dismiss",
+      "target": "忽略",
+      "expectedMatches": 4,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 4,
+          "patchedMatches": 4
+        }
+      ],
+      "expectedPatchedMatches": 4
+    },
+    {
+      "id": "web.1491.thanks-this-helps-us-make-better-suggest",
+      "source": "Thanks — this helps us make better suggestions.",
+      "target": "谢谢——这有助于我们给出更好的建议。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.couldn-t-send-that-try-again",
+      "source": "Couldn’t send that. Try again.",
+      "target": "无法发送，请重试。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.to-send-esc-to-skip",
+      "source": "↵ to send · Esc to skip",
+      "target": "↵ 发送 · Esc 跳过",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.refresh",
+      "source": "Refresh",
+      "target": "刷新",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.no-suggestions-right-now",
+      "source": "No suggestions right now.",
+      "target": "暂无建议。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.workstream-tasks",
+      "source": "Workstream Tasks",
+      "target": "工作流任务",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.no-communications-right-now",
+      "source": "No communications right now.",
+      "target": "暂无沟通内容。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.communication-tasks",
+      "source": "Communication Tasks",
+      "target": "沟通任务",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.delete",
+      "source": "Delete",
+      "target": "删除",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.select-a-criterion-to-compare-or-a-direc",
+      "source": "Select a criterion to compare, or a direction to continue.",
+      "target": "选择用于比较的标准，或选择要继续的方向。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.direction-to-shape",
+      "source": "Direction to shape",
+      "target": "待塑造的方向",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.direction-being-tested",
+      "source": "Direction being tested",
+      "target": "正在测试的方向",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.think-through",
+      "source": "Think through",
+      "target": "深入思考",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.next",
+      "source": "Next:",
+      "target": "接着：",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.custom",
+      "source": "+ Custom",
+      "target": "+ 自定义",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.to",
+      "source": "To:",
+      "target": "收件人：",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.couldn-t-build-this-think-through-card",
+      "source": "Couldn't build this think-through card.",
+      "target": "无法生成此思考卡片。",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/BSo92HxR.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    },
+    {
+      "id": "web.1491.send",
+      "source": "Send",
+      "target": "发送",
+      "expectedMatches": 1,
+      "files": [
+        {
+          "path": "Contents/Resources/web-chat-resources/dist/app/immutable/chunks/CF6bMsxk.js",
+          "matches": 1,
+          "patchedMatches": 1
+        }
+      ],
+      "expectedPatchedMatches": 1
+    }
+  ]
+}
