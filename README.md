@@ -66,7 +66,7 @@ DIA_ZH_MODE=core ./dia-zh.command apply
 3. 通过源码构建的 arm64 动态库汉化 macOS 静态和动态菜单。
 4. 仅对清单已验证的 Build 执行文件级 WebUI 精确替换。
 
-当前统一词表有 408 个键，其中菜单白名单 156 个。菜单翻译器会保护书签、历史、
+当前统一词表有 1158 个键，其中菜单白名单 156 个。菜单翻译器会保护书签、历史、
 窗口名和网页标题等用户内容；普通网页、AI 实时回答、第三方扩展、prompt、agent
 spec 和服务端临时文案不在范围内。
 
@@ -111,9 +111,25 @@ Mach-O、嵌套 Bundle、Framework，最后 Dia.app，并执行严格深度验�
 ```
 
 测试覆盖词表、占位符、菜单冲突、manifest 索引、87 条 WebUI 规则、180 个文件
-哈希、Zsh/JXA/plist、arm64 编译，以及嵌套签名/JIT Fixture。发布验收与已知基线
+哈希、46 条 Dia 1.49.1 草稿规则及"规则词条同源"不变式、Zsh/JXA/plist、arm64
+编译，以及嵌套签名/JIT Fixture。发布验收与已知基线
 见 [QA_CHECKLIST.md](docs/QA_CHECKLIST.md) 和
 [BUILD_PROVENANCE.md](docs/BUILD_PROVENANCE.md)。
+
+## 致谢与来源
+
+统一词表中 Dia `1.49.1` 界面词条的**覆盖范围**参考了
+[zwjtano/dia-zh-patch](https://github.com/zwjtano/dia-zh-patch) 的公开说明：该
+项目适配 Dia `1.49.1 (87398)`，覆盖菜单、设置、技能、Tools、Formats 与聊天界面。
+
+该仓库**没有提供任何开源许可证**（仓库内无 LICENSE 文件，GitHub 也未识别到
+许可证），按"保留一切权利"处理。因此本项目只参考了它「哪些界面和字符串值得
+翻译」这一范围信息，**未复制、改写或转述其任何中文译文**——新增词条全部为
+独立重译。其资源替换机制仅作为设计参考，未引入其脚本、补丁包或二进制。
+
+`manifests/1.49.1-87398.rules.json` 是由此整理的规则草稿，尚未注册进
+`index.json`；转换范围与排除项见
+[1.49.1 转换说明](docs/1.49.1-CONVERSION.md)。
 
 ## 许可证
 
