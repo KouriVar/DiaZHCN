@@ -1096,6 +1096,43 @@
 "Outputs" = "输出";
 "Work on this" = "处理此项";
 
+/* Dia 1.57.1 实测补齐（第 2 批）
+   依据 1.57.1 (90935) 实测报告 (a) 类清单：词表缺失项与句式大小写不一致项。
+   斜杠命令 token（/Reply、/Summarize 等）属"命令保持原文"边界，未纳入本批。 */
+"Pin/Unpin Tab" = "固定/取消固定标签页";
+"Connecting…" = "正在连接…";
+"Haptic feedback" = "触觉反馈";
+"Address bar routing" = "地址栏路由";
+"Play chat sounds" = "播放聊天提示音";
+"Play daily report sounds" = "播放每日报告提示音";
+"Quitting Dia" = "退出 Dia";
+"When quitting..." = "退出时...";
+"Top bar" = "顶部栏";
+"Automatically clean up tabs I haven't used" = "自动整理我未使用的标签页";
+"Add emoji to new tab groups" = "为新标签页组添加表情符号";
+"Chats" = "聊天";
+"Tab layout" = "标签页布局";
+"Tab groups" = "标签页组";
+"Tab cleanup" = "标签页整理";
+"Automatically connect my logged-in apps" = "自动连接我已登录的应用";
+"All apps" = "所有应用";
+
+/* 技能显示名（不含斜杠的命令 token；提示词正文按边界不译） */
+"Research" = "研究";
+"Explain" = "解释";
+"Analyze" = "分析";
+"Summarize" = "总结";
+"Rephrase" = "改写";
+"Rewrite" = "重写";
+"Proofread" = "校对";
+"Reply" = "回复";
+"Quotes" = "引用";
+"Outline" = "提纲";
+"Citations" = "引文";
+"PR Review Request" = "PR 审查请求";
+"Find Notion Documents" = "查找 Notion 文档";
+"Important Emails" = "重要邮件";
+
 /* 原生菜单（由 DiaZhMenu.dylib 按白名单读取） */
 "Invite to Dia…" = "邀请加入 Dia…";
 "Sign Out" = "退出登录";
