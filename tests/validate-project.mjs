@@ -216,6 +216,9 @@ assert.ok(helper.includes("expectedMatches"));
 assert.ok(helper.includes("remainingSourceMatches"));
 assert.ok(helper.includes("minimumTotalWebMatches"));
 assert.ok(helper.includes("expectedTextFiles"));
+// 反引号（模板字面量）锚点必须由清单 opt-in，默认行为不能变。
+assert.ok(helper.includes("webAnchorVariants"));
+assert.ok(helper.includes('DEFAULT_ANCHORS = ["double", "single", "angle", "entity"]'));
 assert.ok(helper.includes("writeUtf8Atomic"));
 assert.ok(!helper.includes("eval("));
 new Function(helper.replace(/^#!.*\n/, ""));

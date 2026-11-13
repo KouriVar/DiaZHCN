@@ -115,23 +115,56 @@ function countOccurrences(text, needle) {
   return text.split(needle).length - 1;
 }
 
-function variants(rule) {
+// 默认只使用既有四种锚点，顺序与历史实现完全一致；
+// 反引号（JS 模板字面量）必须由清单显式声明 webAnchorVariants 才启用，
+// 以免改变既有 Build 清单的命中数。
+const DEFAULT_ANCHORS = ["double", "single", "angle", "entity"];
+const SUPPORTED_ANCHORS = ["double", "single", "angle", "entity", "template"];
+
+function manifestAnchors(manifest) {
+  const configured = manifest.webAnchorVariants;
+  if (configured === undefined) {
+    return DEFAULT_ANCHORS;
+  }
+  if (!Array.isArray(configured) || configured.length === 0) {
+    fail("webAnchorVariants 必须是非空数组：" + manifest.shortVersion);
+  }
+  configured.forEach((name) => {
+    if (SUPPORTED_ANCHORS.indexOf(name) === -1) {
+      fail("未知的锚点类型：" + name);
+    }
+  });
+  return SUPPORTED_ANCHORS.filter((name) => configured.indexOf(name) !== -1);
+}
+
+function variants(rule, anchors) {
+  const selected = anchors || DEFAULT_ANCHORS;
   const escapedSource = rule.source.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
   const escapedTarget = rule.target.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
   const singleSource = rule.source.replace(/\\/g, "\\\\").replace(/'/g, "\\'");
   const singleTarget = rule.target.replace(/\\/g, "\\\\").replace(/'/g, "\\'");
-  return [
-    { find: '"' + escapedSource + '"', replace: '"' + escapedTarget + '"' },
-    { find: "'" + singleSource + "'", replace: "'" + singleTarget + "'" },
-    { find: ">" + rule.source + "<", replace: ">" + rule.target + "<" },
-    {
-      find: "&quot;" + rule.source + "&quot;",
-      replace: "&quot;" + rule.target + "&quot;"
+  const result = [];
+  selected.forEach((name) => {
+    if (name === "double") {
+      result.push({ find: '"' + escapedSource + '"', replace: '"' + escapedTarget + '"' });
+    } else if (name === "single") {
+      result.push({ find: "'" + singleSource + "'", replace: "'" + singleTarget + "'" });
+    } else if (name === "angle") {
+      result.push({ find: ">" + rule.source + "<", replace: ">" + rule.target + "<" });
+    } else if (name === "entity") {
+      result.push({
+        find: "&quot;" + rule.source + "&quot;",
+        replace: "&quot;" + rule.target + "&quot;"
+      });
+    } else {
+      result.push({ find: "`" + rule.source + "`", replace: "`" + rule.target + "`" });
     }
-  ];
+  });
+  return result;
 }
 
 function auditFiles(files, manifest, expectedSide) {
+  const anchors = manifestAnchors(manifest);
   const contents = {};
   const byRelativePath = {};
   files.forEach((file) => {
@@ -141,9 +174,9 @@ function auditFiles(files, manifest, expectedSide) {
 
   const results = manifest.webRules.map((rule) => {
     const ruleVariants = expectedSide === "target"
-      ? variants({ source: rule.target, target: rule.source })
-      : variants(rule);
-    const originalVariants = variants(rule);
+      ? variants({ source: rule.target, target: rule.source }, anchors)
+      : variants(rule, anchors);
+    const originalVariants = variants(rule, anchors);
     let count = 0;
     let remainingSourceMatches = 0;
     const matchedFiles = [];
@@ -202,6 +235,7 @@ function auditFiles(files, manifest, expectedSide) {
 }
 
 function applyRules(files, manifest, audited) {
+  const anchors = manifestAnchors(manifest);
   const changed = [];
   files.forEach((file) => {
     let text = audited.contents[file.fullPath];
@@ -210,7 +244,7 @@ function applyRules(files, manifest, audited) {
       if (!(rule.files || []).some((expectation) => expectation.path === file.relativePath)) {
         return;
       }
-      variants(rule).forEach((variant) => {
+      variants(rule, anchors).forEach((variant) => {
         text = text.split(variant.find).join(variant.replace);
       });
     });

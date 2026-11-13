@@ -14,6 +14,7 @@ cleanup() {
 trap cleanup EXIT
 
 node "$ROOT/tests/validate-project.mjs"
+node "$ROOT/tests/regress-variants.mjs"
 zsh -n "$ROOT/dia-zh.command"
 for script in "$ROOT"/scripts/*.zsh; do
   zsh -n "$script"

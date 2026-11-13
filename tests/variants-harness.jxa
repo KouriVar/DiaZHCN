@@ -1,0 +1,22 @@
+ObjC.import("Foundation");
+
+// 载入真实的 scripts/patch-webui.jxa，并按清单调用 manifestAnchors/variants，
+// 把结果以 JSON 返回，供 tests/regress-variants.mjs 与旧实现逐条比对。
+function readText(path) {
+  return ObjC.unwrap($.NSString.stringWithContentsOfFileEncodingError(
+    path, $.NSUTF8StringEncoding, null
+  ));
+}
+
+function run(argv) {
+  const helperSource = readText(argv[0]).replace(/^#!.*\n/, "");
+  const mod = new Function(
+    helperSource + "\nreturn { variants: variants, manifestAnchors: manifestAnchors };"
+  )();
+  const manifest = JSON.parse(readText(argv[1]));
+  const anchors = mod.manifestAnchors(manifest);
+  const out = manifest.webRules.map(function (rule) {
+    return { id: rule.id, anchors: anchors, variants: mod.variants(rule, anchors) };
+  });
+  return JSON.stringify(out);
+}
