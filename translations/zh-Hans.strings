@@ -1137,6 +1137,11 @@
 "Automatically clean up tabs I haven’t used" = "自动整理我未使用的标签页";
 "⌥⇧-click opens tab in group" = "⌥⇧ 点按会在组内打开标签页";
 
+/* 1.57.1 复核中新发现（精确字节来自 Contents/MacOS/Dia） */
+"When quitting…" = "退出时…";
+"Connection error: %@" = "连接错误：%@";
+"When you connect a tool, Dia can access and process data from it — like messages, documents, and calendar events. This is governed by Dia’s Terms of Service and Privacy Policy." = "当你连接一个工具后，Dia 可以访问并处理其中的数据——例如消息、文档和日历事件。此类访问受 Dia 的服务条款和隐私政策约束。";
+
 /* 原生菜单（由 DiaZhMenu.dylib 按白名单读取） */
 "Invite to Dia…" = "邀请加入 Dia…";
 "Sign Out" = "退出登录";
