@@ -1133,6 +1133,10 @@
 "Find Notion Documents" = "查找 Notion 文档";
 "Important Emails" = "重要邮件";
 
+/* 1.57.1 实机字节核对后的精确键（与上方近似键并存，保留原键不删） */
+"Automatically clean up tabs I haven’t used" = "自动整理我未使用的标签页";
+"⌥⇧-click opens tab in group" = "⌥⇧ 点按会在组内打开标签页";
+
 /* 原生菜单（由 DiaZhMenu.dylib 按白名单读取） */
 "Invite to Dia…" = "邀请加入 Dia…";
 "Sign Out" = "退出登录";
