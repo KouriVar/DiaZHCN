@@ -204,6 +204,9 @@ assert.ok(command.includes("verify_web_hash_manifest patched"));
 assert.ok(signHelper.includes("capture_entitlements"));
 assert.ok(signHelper.includes("sign_all"));
 assert.ok(signHelper.includes("com.apple.application-identifier"));
+// Dia 1.57.1 起主体带 com.apple.developer.aps-environment（受限权限），
+// ad-hoc 签名无法承载，必须由签名器剥离，否则 AMFI 拒绝加载导致无法启动。
+assert.ok(signHelper.includes("com.apple.developer.aps-environment"));
 assert.ok(signHelper.includes("com.apple.security.cs.allow-jit"));
 assert.ok(signHelper.includes("com.apple.security.cs.allow-dyld-environment-variables"));
 assert.ok(signHelper.includes("com.apple.security.cs.disable-library-validation"));

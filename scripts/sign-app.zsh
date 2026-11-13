@@ -71,6 +71,7 @@ sanitize_entitlements() {
   local restricted
   for restricted in \
     "com.apple.application-identifier" \
+    "com.apple.developer.aps-environment" \
     "com.apple.developer.associated-domains" \
     "com.apple.developer.team-identifier" \
     "com.apple.developer.web-browser.public-key-credential" \
